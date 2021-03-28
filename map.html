@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Meu mapa exemplo</title>
+    <style>
+      #mapa {
+        height:100%;
+        width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mapa"></div>
+    <script>
+
+      OI
+
+      function inicializar() {
+        var coordenadas = {lat: -22.793618, lng: -43.0177155};
+
+        var mapa = new google.maps.Map(document.getElementById('mapa'), {
+          zoom: 15,
+          center: coordenadas 
+        });
+
+        var marker = new google.maps.Marker({
+          position: coordenadas,
+          map: mapa,
+          title: 'Meu marcador'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=&callback=inicializar">
+    </script>
+
+  </body>
+</html>
