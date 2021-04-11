@@ -27,7 +27,6 @@ Participantes: João e Deise.
 - [ ] Vincular com Backend para retornar detalhes da Clínica
 - [ ] Ajustar Formatação
 
-
 ## Tecnologias usadas
 
 - HTML,CSS, JavaScript
