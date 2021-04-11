@@ -1,0 +1,38 @@
+#mapa {
+      
+    height:100%;
+    width:100%;
+    margin-top: 0%;
+    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+    
+#Rua{
+    background:    #9b9a9a;
+    border-radius: 25px;
+    border: 0px;
+    padding:       10px 20px;
+    height: 7%;
+    width: 73%;
+    margin-bottom: -20%;
+    top: 0px;
+    position: fixed;
+    margin-right: 15%;
+    margin-left: 15%;
+    z-index: 4000;
+    left: 0;
+    margin-top: 200px;
+    font:          normal bold 50px/1 "Pagella", serif;
+    text-align:    center;
+
+}
+
+#QD{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
