@@ -13,16 +13,16 @@ Participantes: João e Deise.
 
 - Endereço
 - [x] Desenho da tela
-- [ ] Capturar o endereço inserido [latitude e longitude
+- [ ] Capturar o endereço inserido (latitude e longitude)
 - [ ] Vincular com a tela Maps levando o endereço do usuário
 - [ ] Ajustar Formatação
-<br>
+
 - Maps
 - [x] Desenho da tela
 - [ ] Retornar as clínicas no mapa
 - [ ] Capturar a localização do Usuário
 - [ ] Ajustar Formatação
-<br>
+
 - Detalhes
 - [ ] Desenho da tela
 - [ ] Vincular com Backend para retornar detalhes da Clínica
