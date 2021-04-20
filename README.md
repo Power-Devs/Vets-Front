@@ -13,9 +13,9 @@ Participantes: João e Deise.
 
 - Endereço
 - [x] Desenho da tela
-- [ ] Capturar o endereço inserido (latitude e longitude)
-- [ ] Vincular com a tela Maps levando o endereço do usuário
-- [ ] Ajustar Formatação
+- [x] Capturar o endereço inserido (latitude e longitude)
+- [x] Vincular com a tela Maps levando o endereço do usuário
+- [x] Ajustar Formatação
 
 - Maps
 - [x] Desenho da tela
