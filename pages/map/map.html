@@ -1,31 +1,25 @@
-<html>
+<!DOCTYPE HTML>
+<html >
   <head>
     <title>Map</title>
+    <link rel="stylesheet" href="map.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="map.js"></script>
-    <link rel="stylesheet" href="map.css">
-
-  </head>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-      async>
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK0_iwIReeTUn6NdEiS26vedXlb_Yk1xA&callback=initMap&libraries=&v=weekly"
+      async
+    >
     </script>
-
+  </head>
     <body>
-        
       <div id="map"></div>
       
-      <div id="">
+      <div id="" >
         <input type="text" id="localizacao" value>
       </div>
 
-      <script>// input ja escrito
-        var test = "nome da rua";
-        document.getElementById("localizacao").value = test;
-      </script>    
-
-      <div>
-        <button onclick="getLocation()" id="search-button">
+      <div id="botao">
+        <button onclick="initMap()" id="search-button">
          <!-- <svg width="161" height="90" viewBox="0 0 161 90" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d)">
             <rect x="20" y="16" width="121" height="50" rx="13" fill="#004D61"/>
