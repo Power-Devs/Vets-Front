@@ -60,5 +60,4 @@ function initMap() {
       icon: svgMarker
     });
   }
-
 }
