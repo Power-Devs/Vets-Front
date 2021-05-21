@@ -3,7 +3,7 @@ async function searchAddress() {
 
     let userLocation = await googleGeolocationService(userAddress);
 
-    defineLoc(userLocation);
+    setUserLocation(userLocation);
 }
 
 async function googleGeolocationService(endereco){

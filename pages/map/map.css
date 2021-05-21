@@ -1,110 +1,32 @@
-#mapa {
-      
-    height:100%;
-    width:100%;
-    margin-top: 0%;
-    
-}
-
 *{
     margin: 0px;
     padding: 0px;
 }
     
-#Rua{
-    background:    #BDBDBD;
-    border-radius: 25px;
-    border: 0px;
-    padding:       10px 20px;
-    height: 7%;
-    width: 73%;
-    margin-bottom: -20%;
-    top: 0px;
-    position: fixed;
-    margin-right: 15%;
-    margin-left: 15%;
-    z-index: 4000;
-    left: 0;
-    margin-top: 200px;
-    font:          normal bold 50px "Pagella", serif;
-    text-align:    center;
-    outline: none;
-
-}
-
-#QD{
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
 #map {
     height: 100%;
-  }
+}
   
-  html,
-  body {
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-  }
+}
  
- 
-
 #localizacao {
     position: absolute;
     top: 10%;
-    left: 15%;
-    width: 700px;
+    width: 73%;
     background:#9b9a9a;
     border-radius: 13px;
     border: none;
     padding: 10px 20px;
     height: 28px;
-    width: 73%;
     opacity: 70%;
     text-align: center;
     max-width: 400px;
     outline: none;
-    
 }
-
-body {
-    margin:0;
-    padding:0;
-}
-#map-canvas {
-    height: 400px;
-}
-
-#input_container {
-    position:relative;
-    padding:0 0 0 20px;
-    margin:0 20px;
-    background:#ddd;
-    direction: rtl;
-    width: 200px;
-}
-#input {
-    height:20px;
-    margin:0;
-    padding-right: 30px;
-    width: 100%;
-}
-#input_img {
-    position:absolute;
-    bottom:2px;
-    right:5px;
-    width:24px;
-    height:24px;
-}
-
-#search-button{
-    position: absolute;
-    left: 30%;
-    
-} 
-
 
 .searchbtn{
     bottom: 0;
@@ -114,14 +36,13 @@ body {
     background: #004D61;
     box-shadow: 0px 4px 20px rgba(32, 32, 32, 0.06);
     border-radius: 13px;
-
+    position: absolute;
+    margin: 50px 150px;
 }
 
-
-@media (min-width: 800px){
-    .searchbtn{
-        position: absolute;
-        margin: 150px;
-    }
+section{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
