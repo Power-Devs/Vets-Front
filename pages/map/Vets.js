@@ -10,4 +10,15 @@ class Vets{
 
     }
 
+    
+}
+
+function nearbyVets(endereco){
+    let local = {
+        "latitude": endereco.lat(),
+        "longitude": endereco.lng(),
+        "raio": 8000
+    }
+
+    vets = requestHandlerWithBody("vets-api.herokuapp.com/location",local);
 }
