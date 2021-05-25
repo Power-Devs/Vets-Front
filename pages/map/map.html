@@ -1,46 +1,34 @@
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Meu mapa exemplo</title>
-<link rel="stylesheet" href="map.css">
-  </head>
-  <body>
 
+<head>
+  <title>Map</title>
+  <link rel="stylesheet" href="map.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="Vets.js"></script>
+  <script src="user.js"></script>
+  <script src="env.js"></script>
+  <script src="location.js"></script>
+  <script src="styles.js"></script>
+  <script src="map.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK0_iwIReeTUn6NdEiS26vedXlb_Yk1xA&callback=initMap&libraries=&v=weekly"
+    async>
+    </script>
+</head>
 
-    <div>
-    <center>      
-        <input type="text"  name="text" value="Rua das Palmeiras" id="Rua">
-    </center> 
-  </div>
-  
-
-  <div id="QD">
-    <div id="mapa">
-    </div>
- 
-    
-</div>
-
-  </body>
-  <script>
-
-
-    function inicializar() {
-      var coordenadas = {lat: -22.793618, lng: -43.0177155};
-
-      var mapa = new google.maps.Map(document.getElementById('mapa'), {
-        zoom: 15,
-        center: coordenadas 
-      });
-
-      var marker = new google.maps.Marker({
-        position: coordenadas,
-        map: mapa,
-        title: 'Meu marcador'
-      });
-    }
-
-  </script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=&callback=inicializar">
-  </script>
+<body>
+  <div id="map"></div>
+  <section>
+    <input class="localizacao" type="text" id="localizacao" placeholder="Digite o seu endereço">
+    <button class="searchbtn" onclick="searchAddress()" id="search-button">
+      <div>
+        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2 11.9474L23 2L13.0526 23L10.8421 14.1579L2 11.9474Z"
+            stroke="white" stroke-width="2.625" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </button>
+  </section>
+</body>
 </html>
