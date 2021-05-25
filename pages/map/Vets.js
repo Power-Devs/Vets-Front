@@ -19,6 +19,20 @@ async function nearbyVets(endereco) {
         "raio": 8000
     }
 
+
+    //TODO: Iterar o request criando um array de entidades vets
     vets = await requestHandler(`${vetsApi}/location?lat=${local.latitude}&lng=${local.longitude}&raio=${local.raio}`);
 
+    vetsLocations = [];
+
+    for (let vet of vets) {
+
+        vetsLocations
+            .push(new google.maps.Marker({
+                position: new google.maps.LatLng(vet.geometry.location),
+                map: map,
+                icon: VetMarker
+            })
+        );
+    }
 }

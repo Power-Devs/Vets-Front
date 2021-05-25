@@ -4,7 +4,7 @@ let userLocationMark;
 let userLocation;
 
 let vets;
-let vetsLocations;
+let vetsLocations = [];
 
 //Inicia o mapa com a lat e long informados
 function initMap() {

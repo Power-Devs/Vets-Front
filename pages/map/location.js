@@ -7,10 +7,9 @@ async function searchAddress() {
 }
 
 async function googleGeolocationService(endereco){
-
-    let apiKey = "AIzaSyCK0_iwIReeTUn6NdEiS26vedXlb_Yk1xA";
+    
     let userEndereco = encodeURI(endereco);
-    let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${userEndereco}&key=${apiKey}`;
+    let url = googleGeocodeApiRequest(userEndereco);
     let location;
     let result = await requestHandler(url);
 
@@ -24,6 +23,7 @@ async function googleGeolocationService(endereco){
     }
 }
 
+//TODO: Remover o log que a fetch api faz ao executar um request
 async function requestHandler( URL_Request ){
     let response = await fetch( URL_Request );
     let data = await response.json();

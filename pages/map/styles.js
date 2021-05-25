@@ -167,7 +167,7 @@ var VetMarker = {
   fillOpacity: 1,
   strokeWeight: 0,
   rotation: 0,
-  scale: 1.5,
+  scale: 1,
 };
 
 var UserLocationMarker = {
