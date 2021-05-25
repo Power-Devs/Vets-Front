@@ -103,3 +103,5 @@ function criacomentario(nome, nota, avaliacao) {
 }
 
 window.onload = alimentaATela(clinica); // executa a função ao abrir a página.
+
+
