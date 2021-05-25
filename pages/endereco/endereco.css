@@ -1,3 +1,10 @@
+/* @import url(//db.onlinewebfonts.com/c/000833a3a58fb083c44b9de42c2ff0a2?family=Gilroy+SemiBold); */
+
+*{
+    outline: none;
+    font-family: Gilroy-SemiBold;
+}
+
 body{
     background-image: url(../../assets/background.png);
     background-color: rgb(237, 245, 245);
@@ -5,16 +12,55 @@ body{
     background-size: 100%;
 }
 
-#Busca{
-    background:    #9b9a9a;
-    border-radius: 10px;
-    border: 0px;
-    padding:       10px 20px;
+
+h3{
+    margin: 20%;
+}
+
+.busca{
+    position: relative;
+    background:#9b9a9a;
+    border-radius: 13px;
+    border: none;
+    padding: 10px 20px;
     height: 28px;
     width: 73%;
     opacity: 70%;
-    display:       inline-block;
-    font:          normal bold 13px/1 "Pagella", serif;
-    text-align:    center;
+    text-align: center;
+    max-width: 400px;
+}
 
+.searchbtn{
+    position: absolute;
+    margin: 20%;
+    bottom: 0;
+    width: 121px;
+    height: 50px;
+    border: none;
+    background: #004D61;
+    box-shadow: 0px 4px 20px rgba(32, 32, 32, 0.06);
+    border-radius: 13px;
+
+}
+
+section{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 800px){
+    h3{
+        margin: 150px;
+    }
+
+    .busca{
+       position: relative;
+    }
+
+    .searchbtn{
+        position: relative;
+        margin: 150px;
+    }
 }

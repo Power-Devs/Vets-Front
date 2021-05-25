@@ -3,6 +3,7 @@
     padding: 0px;
 }
     
+
 #map {
     height: 100%;
 }
@@ -45,4 +46,5 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
