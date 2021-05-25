@@ -26,15 +26,4 @@ function initMap() {
     icon: UserLocationMarker
   });
 
-  //Exemplo icone marker  de um vet
-  for (const vet of vets ) {
-    new google.maps.Marker({
-      position: { 
-        lat: vet.lat,
-        lng: vet.lng
-      },
-      map: map,
-      icon: VetMarker
-    });
-  }
 }

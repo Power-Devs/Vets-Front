@@ -29,26 +29,3 @@ async function requestHandler( URL_Request ){
     let data = await response.json();
     return data;
 }
-
-
-//TODO: Tentar realizar um get com body
-/*
-Ao pesquisar no google, 
-percebi que eu descobri 
-um buraco negro de discussões sobre isso
-Caso não encontrar uma solução, será necessário alterar a api
-para receber parâmetros via URI
-*/
-async function requestHandlerWithBody( URL_Request, body ){
-    let request = await fetch( 
-        URL_Request, {
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            body: body
-        }
-    );
-
-    return await request.json();
-}
