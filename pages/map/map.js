@@ -15,10 +15,11 @@ function initMap() {
     center: userLocation,
     zoom: 17,
     disableDefaultUI: true, //remove ui do map
-    style: styles
   });
 
-  //marca o loca do usuario, que é o mesmo do center
+  map.setOptions({ styles: styles });
+  
+  //marca o local do usuario, que é o mesmo do center
   //TODO: Melhorar precisão do gps
   userLocationMark = new google.maps.Marker({
     position: userLocation,

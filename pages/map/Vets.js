@@ -12,18 +12,16 @@ class Vets {
 
 }
 
-async function nearbyVets(endereco) {
+async function findNearbyVets(endereco) {
     let local = {
         "latitude": endereco.lat(),
         "longitude": endereco.lng(),
         "raio": 8000
     }
 
-
-    //TODO: Iterar o request criando um array de entidades vets
     vets = await requestHandler(`${vetsApi}/location?lat=${local.latitude}&lng=${local.longitude}&raio=${local.raio}`);
 
-    vetsLocations = [];
+    clearVets();
 
     for (let vet of vets) {
 
@@ -34,5 +32,15 @@ async function nearbyVets(endereco) {
                 icon: VetMarker
             })
         );
+    }
+}
+
+function clearVets(){
+    if(vetsLocations.length>0){
+        for (let vet of vetsLocations) {
+            vet.setMap(null);
+        }
+
+        vetsLocations = [];
     }
 }

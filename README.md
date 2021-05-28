@@ -25,6 +25,7 @@ Participantes: João e Deise.
     - [x] Retornar as clínicas no mapa
     - [x] Capturar a localização do Usuário(Captura de input do usuário)
     - [ ] Ajustar Formatação
+    - [ ] Vincular com a tela de Detalhes ao clicar em uma clínica
 
 - Detalhes
     - [x] Desenho da tela
