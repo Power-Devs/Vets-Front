@@ -9,3 +9,15 @@ const apiKey = "AIzaSyCK0_iwIReeTUn6NdEiS26vedXlb_Yk1xA";
 const googleGeocodeApiRequest = (userEndereco) => `https://maps.googleapis.com/maps/api/geocode/json?address=${userEndereco}&key=${apiKey}`;
 
 const vetImageDefault = "http://www.gerare.com.br/wp-content/uploads/2018/02/110ab962-2b34-4dbb-a465-2e50cd068e7d.jpg"
+
+const getQueryStringValue = (key) => {  
+    
+    let query = window.location.search;
+    let param = new URLSearchParams(query);
+
+    if(param.has(key)){
+        return param.get(key);  
+    }
+    //inserir cenário de erro: queryParam não encontrado
+}
+

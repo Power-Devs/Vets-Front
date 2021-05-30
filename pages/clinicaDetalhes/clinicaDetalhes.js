@@ -83,22 +83,13 @@ function ratingBuilder(nota){
 
   }
 
-  // for(let a = 1; a<=5-rate ;a++){
-
-  //   let img = document.createElement("img");
-  //   img.src = "../../assets/starOff.svg"
-  //   img.className ="starOff";
-  //   ratingStars.push(img);
-
-  // }
-
   return ratingStars;
 
 }
 
 async function start(){
 
-  let id = "ChIJzeaQfUVTzpQRGvUGJg3SnSU";
+  let id = "ChIJt3qz9jKtz5QR4ukKI8iX-34";
   
   let vet = await getClinicaDetails(id);
 

@@ -6,18 +6,20 @@ let userLocation;
 let vets;
 let vetsLocations = [];
 
-//Inicia o mapa com a lat e long informados
-function initMap() {
-  //Localização Inicial
-  userLocation =  new google.maps.LatLng(-23.6595142,-46.7686503);
-
+async function initMap() {
+  const defaultLocation = new google.maps.LatLng(-23.6595142,-46.7686503);
+  
+  //req to show map ->   /map.html?lat=-23.6595142&lng=-46.7686503
+  
+  userLocation =  getLocation()
+  
   map = new google.maps.Map(document.getElementById("map"), {
     center: userLocation,
-    zoom: 17,
-    disableDefaultUI: true, //remove ui do map
+    zoom: 15,
+    disableDefaultUI: true,
   });
 
-  map.setOptions({ styles: styles });
+  map.setOptions({ styles });
   
   //marca o local do usuario, que é o mesmo do center
   //TODO: Melhorar precisão do gps
@@ -27,4 +29,19 @@ function initMap() {
     icon: UserLocationMarker
   });
 
+  if(userLocation!=defaultLocation){
+    setUserLocation({lat:userLocation.lat(),lng : userLocation.lng()});
+  }
+}
+
+function getLocation(){
+  
+  let lat =  getQueryStringValue("lat");
+  let lng =  getQueryStringValue("lng");
+
+  if(lat!=null && lng!=null){
+    return new google.maps.LatLng(lat,lng);
+  }
+
+  return defaultLocation;
 }

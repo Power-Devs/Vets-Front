@@ -5,6 +5,7 @@ async function searchAddress() {
 
     console.log(userLocation);
     //TODO: Inserir aqui a chamada a tela do mapa informando userLocation
+    window.location.href = `../map/map.html?lat=${userLocation.lat}&lng=${userLocation.lng}`
 }
 
 async function googleGeolocationService(endereco){
