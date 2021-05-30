@@ -31,7 +31,7 @@ async function findNearbyVets(endereco) {
                 vet.name +`   (${vet.rating})`+
                 "</strong><br>" +
                 '<p class="infoWindowP">Aberto agora:  ' +
-                `<span>${abertoAgora}</span>`+  
+                openNowDisplay(abertoAgora)+  
                 `<a href="../clinicaDetalhes/clinicaDetalhes.html?id=${vet.placeId }" class="detailsLink">Detalhes</a>` +
                 "</p>" +
                 '<p class="infoWindowP">'+vet.vicinity +'</p>'+
@@ -54,4 +54,18 @@ function clearVets(){
         }
         vetsLocations = [];
     }
+}
+
+function openNowDisplay(openStatus){
+
+    if(openStatus == "Sim"){
+        return `<span class="abertoSim">${openStatus}</span>`
+    }
+  
+    if(openStatus == "Não"){
+        return `<span class="abertoNao">${openStatus}</span>`
+    }
+    
+    return `<span>${openStatus}</span>`
+  
 }

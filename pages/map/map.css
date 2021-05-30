@@ -67,3 +67,12 @@ section{
     margin: 5px;
 }
 
+.abertoSim{
+    color: green;
+    margin-left: 2px;
+}
+
+.abertoNao{
+    color: red;
+    margin-left: 2px;
+}

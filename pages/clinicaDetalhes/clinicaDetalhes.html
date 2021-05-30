@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="clinicaDetalhes.css" />
   <script src="../map/env.js"></script>
   <script src="./detailsService.js"></script>
+  <script src="./comment.js"></script>
   <title>Detalhes da Clinica</title>
-
+  
 </head>
 
 <body>
@@ -27,9 +28,17 @@
     </div>
   </header>
   <section id="comentarios" class="comentarios-container">
-
+    <p>
+      Nota: 
+      <span id="userNota">5</span>
+    </p>  
+    <input type="range" name="userRating" id="userRating" min="1" max="5" value="5">
+    <textarea type="text" id="commentInput" class="commentInput" placeholder="Insira sua avaliação Aqui"></textarea>  
+    <button class="avaliarButton" onclick="submitComment()" >Avaliar</button>
+    <p>Como as outras pessoas avaliaram:</p>
   </section>
+  <script src="clinicaDetalhes.js"></script>
+  <script src="./slider.js"></script>
 </body>
-<script src="clinicaDetalhes.js"></script>
 
 </html>
