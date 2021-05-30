@@ -7,6 +7,7 @@ let vets;
 let vetsLocations = [];
 
 async function initMap() {
+  //TODO: Globalizar defaultLocation
   const defaultLocation = new google.maps.LatLng(-23.6595142,-46.7686503);
   
   //req to show map ->   /map.html?lat=-23.6595142&lng=-46.7686503
@@ -43,5 +44,5 @@ function getLocation(){
     return new google.maps.LatLng(lat,lng);
   }
 
-  return defaultLocation;
+  return new google.maps.LatLng(-23.6595142,-46.7686503);
 }

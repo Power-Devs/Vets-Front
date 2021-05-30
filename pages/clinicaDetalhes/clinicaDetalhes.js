@@ -1,29 +1,37 @@
-let clinica = {
-  nome: "Clinica Devs Dog",
-  tipo: "Veterinário",
-  nota: 5.0,
-  QtdAvaliacoes: 1,
-  imgDaClinica:
-    "http://www.gerare.com.br/wp-content/uploads/2018/02/110ab962-2b34-4dbb-a465-2e50cd068e7d.jpg",
-  avaliacoes: [
-    {
-      nome: "Gustavo",
-      avaliacaoTexto: "Os melhores veterinarios que encontramos",
-      avaliacaoNota: 5.0,
-      avatar:
-        "https://www.pinclipart.com/picdir/big/559-5590325_avatar-icon-png-clipart.png",
-    },
-  ]
-};
-
 function alimentaATela(clinica) {
   
-
   document.getElementById("titulo").innerHTML = clinica.nome;
-  document.getElementById("vet").innerHTML = clinica.tipo;
-  document.getElementById("nota").innerHTML = `${clinica.nota} <span class="">(${clinica.avaliacoes.length})</span>`;
+  document.getElementById("nota").innerHTML = `Avaliação: ${clinica.nota} <span id="clinicaRating" class="ratingStar"></span>`;
   document.getElementById("clinicaImg").src = clinica.imgDaClinica == null ? vetImageDefault : clinica.imgDaClinica;
+  document.getElementById("tel").innerHTML= `Telefone: ${clinica.telefone}`
+  document.getElementById("endereco").innerHTML= `Endereço: ${clinica.endereco}`
+  document.getElementById("openNow").innerHTML= openNowDisplay(clinica.abertoAgora)
   
+
+  if(clinica.abertoEm!=null){
+    for(let openingDay of clinica.abertoEm){
+      let span = document.createElement("span");
+      span.innerHTML = openingDay
+      
+      document.getElementById("horarios").appendChild(span);
+    }
+  }else{
+    document.getElementById("horarios").innerHTML= "Horários abertos: Sem informação"
+  }
+
+  let clinicaStars = ratingBuilder(clinica.nota);
+
+  for (let starIcon of clinicaStars) {
+    document.getElementById("clinicaRating").appendChild(starIcon);
+  }
+
+  if(clinica.avaliacoes.length == 0){
+    document
+      .getElementById("comentarios")
+      .appendChild(noComentaryWarning());
+  }
+  
+
   for (let avaliacao of clinica.avaliacoes) {
     document
       .getElementById("comentarios")
@@ -70,6 +78,22 @@ function criacomentario(avaliacao) {
   return comentario;
 }
 
+function noComentaryWarning(){
+  
+  let comentario;
+  comentario = document.createElement("div");
+  comentario.className = "avaliacao ";
+  
+  comentario.innerHTML =  `
+  <div class="commentContainer" style="margin:10px;">
+    <div class="commentText">
+      <p>Nenhuma avaliação encontrada</p>
+    </div>
+  </div>
+  `
+  return comentario;
+}
+
 function ratingBuilder(nota){
 
   let rate = parseInt(nota);
@@ -87,9 +111,23 @@ function ratingBuilder(nota){
 
 }
 
+function openNowDisplay(openStatus){
+
+  if(openStatus == "Sim"){
+    return  `Aberto agora: <span class="abertoSim"> ${openStatus}</span>`
+  }
+
+  if(openStatus == "Não"){
+    return  `Aberto agora: <span class="abertoNao"> ${openStatus}</span>`
+  }
+  
+  return document.getElementById("openNow").style = "display:none;"
+
+}
+
 async function start(){
 
-  let id = "ChIJt3qz9jKtz5QR4ukKI8iX-34";
+  let id = getIdVet();
   
   let vet = await getClinicaDetails(id);
 
