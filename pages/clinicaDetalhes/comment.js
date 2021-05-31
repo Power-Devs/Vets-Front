@@ -3,14 +3,7 @@ async function submitComment(){
    let text = document.getElementById("commentInput").value;
    let comentario;
 
-   await createAvaliacao(text,nota).then(
-      comentario = criacomentario({
-         avaliacaoNome : "Anônimo",
-         avaliacaoNota: nota,
-         avaliacaoTexto: text,
-         avatar: defaultAvatar
-      })
-   )
+   await createAvaliacao(text,nota)
 
    document
       .getElementById("comentarios")
