@@ -16,8 +16,8 @@ async function getComments(){
         
         let comentario = criacomentario({
             avaliacaoNome : "Anônimo",
-            avaliacaoNota: results.avaliacao,
-            avaliacaoTexto: results.nota,
+            avaliacaoNota: results.nota,
+            avaliacaoTexto: results.avaliacao,
             avatar: defaultAvatar
         });
 
