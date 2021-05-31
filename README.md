@@ -43,3 +43,8 @@ Participantes: João e Deise.
     - Geocode
     - Places
     - Map Javascript API
+- Firebase
+    - Realtime Database
+    - Hosting
+- Deploy com Integração Contínua
+    - GitHub Actions with Firebase Hosting
