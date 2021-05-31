@@ -25,6 +25,7 @@ async function getComments(){
         .getElementById("comentarios")
         .appendChild(comentario);
 
+        window.scrollTo(0,document.body.scrollHeight);
     })
 }
 
