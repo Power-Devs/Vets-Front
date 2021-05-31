@@ -17,7 +17,7 @@ Participantes: João e Deise.
 - Endereço
     - [x] Desenho da tela
     - [x] Capturar o endereço inserido (latitude e longitude)
-    - [ ] Vincular com a tela Maps levando o endereço do usuário
+    - [x] Vincular com a tela Maps levando o endereço do usuário
     - [x] Ajustar Formatação
  
 - Maps
@@ -25,14 +25,14 @@ Participantes: João e Deise.
     - [x] Retornar as clínicas no mapa
     - [x] Capturar a localização do Usuário(Captura de input do usuário)
     - [ ] Ajustar Formatação
-    - [ ] Vincular com a tela de Detalhes ao clicar em uma clínica
+    - [x] Vincular com a tela de Detalhes ao clicar em uma clínica
 
 - Detalhes
     - [x] Desenho da tela
-    - [ ] Vincular com Backend para retornar detalhes da Clínica
+    - [x] Vincular com Backend para retornar detalhes da Clínica
     - [ ] Ajustar Formatação
-    - [ ] Campo Inserção de Avaliação
-    - [ ] Integração Firebase
+    - [x] Campo Inserção de Avaliação
+    - [x] Integração Firebase
 
 ## Tecnologias usadas
 
