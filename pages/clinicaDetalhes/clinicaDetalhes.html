@@ -1,44 +1,47 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="clinicaDetalhes.css" />
-  <script src="../map/env.js"></script>
-  <script src="./detailsService.js"></script>
-  <script src="./comment.js"></script>
-  <title>Detalhes da Clinica</title>
   
-</head>
-
-<body>
-  <img id="clinicaImg" width="100%" height="150px"  />
-  <header>
-    <div class="apresentacao">
-      <h1 id="titulo">Carregando...</h1>
-      <h3 id="nota">
-        ..<img />
-      </h3>
-      <h3 id="openNow"></h3>
-      <div class="details">
-        <p id="tel">Telefone:</p>
-        <p id="endereco">Endereço: </p>
-        <!-- <p id="horarios">Horários abertos:</p> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="clinicaDetalhes.css" />
+    <script src="../map/env.js"></script>
+    <script src="./detailsService.js"></script>
+    <script src="./comment.js"></script>
+    <title>Detalhes da Clinica</title>
+    
+  </head>
+  
+  <body>
+    <img id="clinicaImg" width="100%" height="150px" />
+    <header>
+      <div class="apresentacao">
+        <h1 id="titulo">Carregando...</h1>
+        <h3 id="nota">
+          ..<img />
+        </h3>
+        <h3 id="openNow"></h3>
+        <div class="details">
+          <p id="tel">Telefone:</p>
+          <p id="endereco">Endereço: </p>
+          <!-- <p id="horarios">Horários abertos:</p> -->
+        </div>
       </div>
-    </div>
-  </header>
-  <section id="comentarios" class="comentarios-container">
-    <p>
-      Nota: 
-      <span id="userNota">5</span>
-    </p>  
-    <input type="range" name="userRating" id="userRating" min="1" max="5" value="5">
-    <textarea type="text" id="commentInput" class="commentInput" placeholder="Insira sua avaliação Aqui"></textarea>  
-    <button class="avaliarButton" onclick="submitComment()" >Avaliar</button>
-    <p>Como as outras pessoas avaliaram:</p>
-  </section>
-  <script src="clinicaDetalhes.js"></script>
-  <script src="./slider.js"></script>
-</body>
-
-</html>
+    </header>
+    <section id="comentarios" class="comentarios-container">
+      <p>
+        Nota:
+        <span id="userNota">5</span>
+      </p>
+      <input type="range" name="userRating" id="userRating" min="1" max="5" value="5">
+      <textarea type="text" id="commentInput" class="commentInput" placeholder="Insira sua avaliação Aqui"></textarea>
+      <button class="avaliarButton" onclick="submitComment()">Avaliar</button>
+      <p>Como as outras pessoas avaliaram:</p>
+    </section>
+    <script src="clinicaDetalhes.js"></script>
+    <script src="./slider.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js"></script>
+    <script src="../../config/config.js"></script>
+    <script src="./firebaseService.js"></script>
+  </body>
+  
+  </html>

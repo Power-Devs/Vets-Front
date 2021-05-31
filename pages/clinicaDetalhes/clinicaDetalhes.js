@@ -1,3 +1,5 @@
+let id;
+
 function alimentaATela(clinica) {
   
   document.getElementById("titulo").innerHTML = clinica.nome;
@@ -31,13 +33,15 @@ function alimentaATela(clinica) {
       .appendChild(noComentaryWarning());
   }
   
-
+  //Cria Comentários vindos da api
   for (let avaliacao of clinica.avaliacoes) {
     document
       .getElementById("comentarios")
       .appendChild(criacomentario(avaliacao));
   }
 
+  //Cria comentários vindo do firebase
+  getComments();
 }
 
 function criacomentario(avaliacao) {
@@ -127,7 +131,7 @@ function openNowDisplay(openStatus){
 
 async function start(){
 
-  let id = getIdVet();
+  id = getIdVet();
   
   let vet = await getClinicaDetails(id);
 
