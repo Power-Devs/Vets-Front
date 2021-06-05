@@ -8,6 +8,9 @@ async function createAvaliacao(avaliacaoTexto, avaliacaoNota){
         avaliacao: avaliacaoTexto, 
         nota: avaliacaoNota
     })
+
+    window.scrollTo(0,document.body.scrollHeight);
+    document.getElementById("commentInput").value = " "
 }
 
 async function getComments(){
@@ -24,9 +27,7 @@ async function getComments(){
         document
         .getElementById("comentarios")
         .appendChild(comentario);
-        
-        window.scrollTo(0,document.body.scrollHeight);
-        document.getElementById("commentInput").value = " "
+
     })
 }
 
