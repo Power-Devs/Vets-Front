@@ -53,6 +53,10 @@ section{
     align-items: center;
 }
 
+p{
+    margin: 10px 20px;
+}
+
 @media (min-width: 800px){
     h3{
         margin: 150px;
@@ -61,5 +65,7 @@ section{
     .busca{
        position: relative;
     }
+
+  
 
 }

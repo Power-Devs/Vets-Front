@@ -77,17 +77,16 @@ section{
     margin-left: 2px;
 }
 
-@media screen and (max-width: 800px){
+@media (max-width: 800px){
 
     *{
-        font-size: 20pt;
+        font-size: 16pt;
     }
     
     #localizacao{
-        max-width: 90%;
-        height: 40px;
+        max-width: 70%;
+        height: 30px;
     }
-
 
 }
 

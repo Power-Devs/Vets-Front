@@ -144,8 +144,8 @@ section{
     border-radius: 8px;
     text-decoration: none;
     color: #fff;
-    padding: 3px 10px;
-    margin: 25px;
+    padding: 8px 10px;
+    margin: 10px;
 
 }
 
@@ -168,8 +168,10 @@ section{
 
 }
 
-@media screen and (min-width: 600px){
+@media (min-width: 600px){
+
     #clinicaImg{
         height: 30%;
     }
+
 }
