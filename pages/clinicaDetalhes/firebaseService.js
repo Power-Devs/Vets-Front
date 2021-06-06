@@ -3,14 +3,17 @@ const data = db.ref(`clinicas/${id}`);
 
 
 async function createAvaliacao(avaliacaoTexto, avaliacaoNota){
+    if(id!=null){
+        await data.push({
+            avaliacao: avaliacaoTexto, 
+            nota: avaliacaoNota
+        })
     
-    await data.push({
-        avaliacao: avaliacaoTexto, 
-        nota: avaliacaoNota
-    })
+        window.scrollTo(0,document.body.scrollHeight);
+        document.getElementById("commentInput").value = " "
+    }
 
-    window.scrollTo(0,document.body.scrollHeight);
-    document.getElementById("commentInput").value = " "
+    window.location.href = `../map/map.html`
 }
 
 async function getComments(){

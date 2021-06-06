@@ -9,18 +9,6 @@ function alimentaATela(clinica) {
   document.getElementById("endereco").innerHTML= `Endereço: ${clinica.endereco}`
   document.getElementById("openNow").innerHTML= openNowDisplay(clinica.abertoAgora)
   
-
-  // if(clinica.abertoEm!=null){
-  //   for(let openingDay of clinica.abertoEm){
-  //     let span = document.createElement("span");
-  //     span.innerHTML = openingDay
-      
-  //     document.getElementById("horarios").appendChild(span);
-  //   }
-  // }else{
-  //   document.getElementById("horarios").innerHTML= "Horários abertos: Sem informação"
-  // }
-
   let clinicaStars = ratingBuilder(clinica.nota);
 
   for (let starIcon of clinicaStars) {

@@ -7,7 +7,7 @@ let vets;
 let vetsLocations = [];
 
 async function initMap() {
-  const defaultLocation = new google.maps.LatLng(-23.6595142,-46.7686503);
+  const defaultLocation = new google.maps.LatLng(-23.550370,-46.633899);
   
   userLocation =  getLocation()
   
@@ -39,5 +39,5 @@ function getLocation(){
     return new google.maps.LatLng(lat,lng);
   }
 
-  return new google.maps.LatLng(-23.6595142,-46.7686503);
+  return new google.maps.LatLng(-23.550370,-46.633899);
 }
