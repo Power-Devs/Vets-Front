@@ -121,9 +121,13 @@ async function start(){
 
   id = getIdVet();
   
-  let vet = await getClinicaDetails(id);
+  if(id != null){
+    let vet = await getClinicaDetails(id);
+    alimentaATela(vet);
+  }else{
+    window.location.href = `../map/map.html`
+  }
 
-  alimentaATela(vet);
 }
 
 window.onload = start();

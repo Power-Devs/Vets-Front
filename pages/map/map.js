@@ -32,11 +32,14 @@ async function initMap() {
 
 function getLocation(){
   
-  let lat =  getQueryStringValue("lat");
-  let lng =  getQueryStringValue("lng");
+  let lat =  localStorage.getItem("lat")
+  let lng =  localStorage.getItem("lng");
 
+  
   if(lat!=null && lng!=null){
+    
     return new google.maps.LatLng(lat,lng);
+
   }
 
   return new google.maps.LatLng(-23.550370,-46.633899);
