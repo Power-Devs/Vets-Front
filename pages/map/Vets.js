@@ -18,7 +18,8 @@ async function findNearbyVets(endereco) {
         let vetLocation = new google.maps.Marker({
             position: new google.maps.LatLng(vet.geometry.location),
             map: map,
-            icon: VetMarker
+            icon: VetMarker,
+            animation: google.maps.Animation.DROP,
         })
 
         vetLocation.addListener("click", (click) => {
