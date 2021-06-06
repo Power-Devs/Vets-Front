@@ -3,8 +3,8 @@ async function searchAddress() {
 
     let userLocation = await googleGeolocationService(userAddress);
 
-    localStorage.setItem(lat,userLocation.lat)
-    localStorage.setItem(lng,userLocation.lng)
+    localStorage.setItem("lat",userLocation.lat)
+    localStorage.setItem("lng",userLocation.lng)
     
     window.location.href = `../map/map.html`
 }
