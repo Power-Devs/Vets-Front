@@ -18,12 +18,10 @@ async function googleGeolocationService(endereco){
         location = result.results[0].geometry.location;
         return location;
     }else{
-        //TODO: Inserir aqui um aviso erro na interface.
-        window.alert("request invalida")
+        window.alert("Insira um endereço para a ser pesquisado")
     }
 }
 
-//TODO: Remover o log que a fetch api faz ao executar um request
 async function requestHandler( URL_Request ){
     let response = await fetch( URL_Request );
     let data = await response.json();

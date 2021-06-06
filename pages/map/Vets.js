@@ -6,7 +6,6 @@ async function findNearbyVets(endereco) {
         "raio": 8000
     }
 
-    //TODO: abstrair em um método getLocation();
     vets = await requestHandler(`${vetsApi}/location?lat=${local.latitude}&lng=${local.longitude}&raio=${local.raio}`);
 
     clearVets();
@@ -22,7 +21,6 @@ async function findNearbyVets(endereco) {
             icon: VetMarker
         })
 
-        //TODO: Implementar remoção de uma infowindow quando outra abrir
         vetLocation.addListener("click", (click) => {
             infowindow.close()
 

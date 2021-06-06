@@ -7,10 +7,7 @@ let vets;
 let vetsLocations = [];
 
 async function initMap() {
-  //TODO: Globalizar defaultLocation
   const defaultLocation = new google.maps.LatLng(-23.6595142,-46.7686503);
-  
-  //req to show map ->   /map.html?lat=-23.6595142&lng=-46.7686503
   
   userLocation =  getLocation()
   
@@ -22,8 +19,6 @@ async function initMap() {
 
   map.setOptions({ styles });
   
-  //marca o local do usuario, que é o mesmo do center
-  //TODO: Melhorar precisão do gps
   userLocationMark = new google.maps.Marker({
     position: userLocation,
     map: map,
