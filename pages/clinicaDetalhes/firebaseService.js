@@ -11,9 +11,9 @@ async function createAvaliacao(avaliacaoTexto, avaliacaoNota){
     
         window.scrollTo(0,document.body.scrollHeight);
         document.getElementById("commentInput").value = " "
+    }else{
+        window.location.href = `../map/map.html`
     }
-
-    window.location.href = `../map/map.html`
 }
 
 async function getComments(){
